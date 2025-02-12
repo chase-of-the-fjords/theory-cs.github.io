@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- logo on tab-->
+	<link rel="shortcut icon" href="../resources/images/wood-951875_960_720.jpeg" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="Cn_GGElo-cbNkuj65G4fN_F-MR20NoOdTx_rlckOEPU" />
+
+    <!-- import font -->
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>	
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Introduction to Theory of Computation">
+	<meta name="author" content="Mia Minnes">
+
+	<title>CSE105W25</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!---Collapsible Menu-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="css/sidebarStyle.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<!-- icons for side menu -->
+	<link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' >
+	<link rel="shortcut icon" href="../resources/images/wood-951875_960_720.jpeg" type="image/x-icon">
+</head>
+	
+
+<body>
+	<div class="content">
+
+		 <div class="sidebar"id="unit">
+		<li><a href= " courseInfo.html" aria-label="Go to Home "><i class='bx bx-home-smile'></i><span class="links_name"> Home</span></a><span class="tooltip"> Home</span></li>
+	
+			
+			<ul class="nav-list">
+			
+			<li>
+				<a href=overview_calendar.html aria-label="Go toCalendar">
+					<i class='bx bx-calendar'></i>
+					<span class="links_name">Calendar</span>
+				</a>
+				<span class="tooltip">Calendar</span>
+			</li><li><a href= " courseInfo.html" aria-label="Go to Courseinfo "><i class='bx bxs-book-content'></i><span class="links_name"> Courseinfo</span></a><span class="tooltip"> Courseinfo</span></li>
+<li><a href= " assignments.html" aria-label="Go to Assignments "><i class='bx bxs-detail'></i><span class="links_name"> Assignments</span></a><span class="tooltip"> Assignments</span></li>
+<li><a href= " glossary.html" aria-label="Go to Glossary "><i class='bx bxs-book-open'></i><span class="links_name"> Glossary</span></a><span class="tooltip"> Glossary</span></li>
+<li><a href= " supplemental_videos.html" aria-label="Go to Supplemental Videos "><i class='bx bxs-videos'></i><span class="links_name"> Supplemental Videos</span></a><span class="tooltip"> Supplemental Videos</span></li>
+<li><a href= " office_hours.html" aria-label="Go to Office Hours "><i class='bx bxs-help-circle'></i><span class="links_name"> Office Hours</span></a><span class="tooltip"> Office Hours</span></li>
+</ul> </div> 
+	        <script>
+		    let sidebar = document.querySelector(".sidebar");
+		    let closeBtn = document.querySelector("#btn");
+		
+		    closeBtn.addEventListener("click", ()=>{
+			    sidebar.classList.toggle("open");
+			    menuBtnChange();//calling the function(optional)
+		    });
+		
+		    searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+			    sidebar.classList.toggle("open");
+			    menuBtnChange(); //calling the function(optional)
+		    });
+		
+		    // following are the code to change sidebar button(optional)
+		    function menuBtnChange() {
+			    if(sidebar.classList.contains("open")){
+				    closeBtn.classList.replace("bx-chevron-right", "bx-chevron-left");//replacing the iocns class
+			    }
+			    else {
+				    closeBtn.classList.replace("bx-chevron-left","bx-chevron-right");//replacing the iocns class
+			    }
+		    }
+	        </script>
+
+		 <div id="mySidebar" class="collapsedSidebar">
+			<a href=courseInfo.html class="homeMobile"> CSE105W25</a> <!--NAME-->
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×&nbsp;</a>
+			<a href=overview_calendar.html>Calendar</a><a href="assignments.html"> Assignments </a><a href="glossary.html"> Glossary </a><a href="supplemental_videos.html"> Supplemental Videos </a><a href="office_hours.html"> Office Hours </a><a href= "unit1.html"">Weeks 0 and 1</a><a href= "unit2.html"">Week 2</a><a href= "unit3.html"">Week 3</a><a href= "unit4.html"">Week 4</a><a href= "unit5.html"">Week 5</a><a href= "unit6.html"">Week 6</a><a href= "unit7.html"">Week 7</a><a href= "unit8.html"">Week 8</a><a href= "unit9.html"">Week 9</a><a href= "unit10.html"">Week 10</a><a href= "unit11.html"">Finals week</a> </div>
+
+		<div class="openbutton">
+			<button class="openbtn"  onclick="openNav()">☰ Menu</button> 
+		</div> 
+		  
+		<script>
+		  function openNav() {
+			document.getElementById("mySidebar").style.width = "100%";
+			document.getElementById("content").style.marginLeft = "100%";
+		  }
+		  
+		  function closeNav() {
+			document.getElementById("mySidebar").style.width = "0";
+			document.getElementById("content").style.marginLeft= "0";
+		  }
+		</script>
+		
+
+		<!-- Overview -->
+		<div class="row">
+			<div class="col-lg-12 text-left">
+				<h1 tabindex="1">Assignments</h1>
+				<!--<p>Compiled assignments file <a href="../output/assignments/assignments-compiled.pdf" download>download</a></p>-->
+
+				<p>
+					Click on assignment name to expand to detailed viewer.
+				</p>
+				<p>
+					Click the (gold) PDF or (navy blue) LaTeX buttons to download the 
+					file for the assignment. Click on the (blue) Raw HTML button to 
+					open a plain browser view of the assignment. 
+				</p>
+				<p>
+					When Solutions are released, access them using the toggle switch next to the 
+					"Solutions" label.
+				</p>
+				<p>
+					You can view the assignment PDF file in full screen or in a separate application.
+				</p>
+				
+				<p>
+				<a href="office_hours.html">Office hours</a>: drop-in (in person
+				and Zoom) Question & Answer opportunity to talk with the tutors, TAs, and instructor about concepts and specific questions from 
+				class and homework.
+				</p>
+			</div>
+		</div>
+
+		<div class="container" style="margin-left: 0px; padding: 0px;">
+			<div id="accordion">
+				<div class="box outcome"  id="box1"><button type="button" class="collapsible"
+			"> 
+<h2 style= "line-height:20px;"> <i id="sideBtn1" class='bx bx-caret-right'></i> 
+			Hw1Cse105W25</h2> </button> <div class="boxContent" style="display: none;"> <hr> <p> This is a group optional assignment</p> <p> Due: 1/16/25 at 5pm (late submission open until 8am next morning)</p> <p> <a tabindex = "2" class="button PDF" aria-label="Download PDF" 
+		href=../output/assignments/hw1CSE105W25.pdf download>PDF</a> <a tabindex = "2" style= "display: inline-block;" class="button LaTeX" aria-label="Download .LaTeX" 
+			href=../notes/assignments-flat/hw1CSE105W25.tex download>LaTeX</a>  <a tabindex = "2" style= "display: inline-block;" class="button HTML" aria-label="Open HTML file of Document in New Tab" 
+			href= ../output/assignments/hw1CSE105W25.html target="HTML">Raw HTML</a><br> <label>Sample solutions<input type="checkbox" id="toggle-1">
+				<span class="slider round"></span>
+				<script>
+					annotated1 = false;
+					document.getElementById("toggle-1").onclick = function() {
+						if(annotated1  == false) {
+							console.log("false to true");
+							annotated1  = true;
+							annotations(true, "../output/assignments/hw1CSE105W25.pdf","../files/hw1CSE105W25_solution.pdf", "hw1CSE105W25")
+						}
+						else {
+							console.log("true to false");
+							annotated1  = false;
+							annotations(false, "../output/assignments/hw1CSE105W25.pdf","../files/hw1CSE105W25_solution.pdf", "hw1CSE105W25")
+						}
+					}
+
+					
+				</script></label>
+			 <br> <iframe class="PDFjs" id="hw1CSE105W25" src="web/viewer.html?file=../../output/assignments/hw1CSE105W25.pdf" 
+		title="webviewer" frameborder="0" width="100%" height="600"></iframe> <script>
+			 toggle = document.querySelector('.toggle input')
+
+			toggle.addEventListener('click', () => {
+    		 onOff = toggle.parentNode.querySelector('.onoff1')
+    		onOff.textContent = toggle.checked ? 'ON' : 'OFF'
+			})
+			
+			function annotations(notes, annotated,id) {
+				var doc;
+				var drive;
+				 toggle = document.querySelector('.toggle input')
+				//0 value means annotations are off 
+				if (toggle.checked) {
+					doc = "web/viewer.html?file=../"+notes
+				} 
+
+				//1 value turns annotations on
+				else {
+					doc = "web/viewer.html?file=../" +annotated
+				}
+				
+                document.getElementById(id).src = doc;
+			}
+		</script></div></div><div class="box outcome"  id="box2"><button type="button" class="collapsible"
+			"> 
+<h2 style= "line-height:20px;"> <i id="sideBtn2" class='bx bx-caret-right'></i> 
+			Hw2Cse105W25</h2> </button> <div class="boxContent" style="display: none;"> <hr> <p> This is a group optional assignment</p> <p> Due: 1/30/25 at 5pm (late submission open until 8am next morning)</p> <p> <a tabindex = "2" class="button PDF" aria-label="Download PDF" 
+		href=../output/assignments/hw2CSE105W25.pdf download>PDF</a> <a tabindex = "2" style= "display: inline-block;" class="button LaTeX" aria-label="Download .LaTeX" 
+			href=../notes/assignments-flat/hw2CSE105W25.tex download>LaTeX</a>  <a tabindex = "2" style= "display: inline-block;" class="button HTML" aria-label="Open HTML file of Document in New Tab" 
+			href= ../output/assignments/hw2CSE105W25.html target="HTML">Raw HTML</a><br> <label>Sample solutions<input type="checkbox" id="toggle-2">
+				<span class="slider round"></span>
+				<script>
+					annotated2 = false;
+					document.getElementById("toggle-2").onclick = function() {
+						if(annotated2  == false) {
+							console.log("false to true");
+							annotated2  = true;
+							annotations(true, "../output/assignments/hw2CSE105W25.pdf","../files/hw2CSE105W25_solution.pdf", "hw2CSE105W25")
+						}
+						else {
+							console.log("true to false");
+							annotated2  = false;
+							annotations(false, "../output/assignments/hw2CSE105W25.pdf","../files/hw2CSE105W25_solution.pdf", "hw2CSE105W25")
+						}
+					}
+
+					
+				</script></label>
+			 <br> <iframe class="PDFjs" id="hw2CSE105W25" src="web/viewer.html?file=../../output/assignments/hw2CSE105W25.pdf" 
+		title="webviewer" frameborder="0" width="100%" height="600"></iframe> <script>
+			 toggle = document.querySelector('.toggle input')
+
+			toggle.addEventListener('click', () => {
+    		 onOff = toggle.parentNode.querySelector('.onoff2')
+    		onOff.textContent = toggle.checked ? 'ON' : 'OFF'
+			})
+			
+			function annotations(notes, annotated,id) {
+				var doc;
+				var drive;
+				 toggle = document.querySelector('.toggle input')
+				//0 value means annotations are off 
+				if (toggle.checked) {
+					doc = "web/viewer.html?file=../"+notes
+				} 
+
+				//1 value turns annotations on
+				else {
+					doc = "web/viewer.html?file=../" +annotated
+				}
+				
+                document.getElementById(id).src = doc;
+			}
+		</script></div></div><div class="box outcome"  id="box3"><button type="button" class="collapsible"
+			"> 
+<h2 style= "line-height:20px;"> <i id="sideBtn3" class='bx bx-caret-right'></i> 
+			Hw3Cse105W25</h2> </button> <div class="boxContent" style="display: none;"> <hr> <p> This is a group optional assignment</p> <p> Due: 2/6/25 at 5pm (late submission open until 8am next morning)</p> <p> <a tabindex = "2" class="button PDF" aria-label="Download PDF" 
+		href=../output/assignments/hw3CSE105W25.pdf download>PDF</a> <a tabindex = "2" style= "display: inline-block;" class="button LaTeX" aria-label="Download .LaTeX" 
+			href=../notes/assignments-flat/hw3CSE105W25.tex download>LaTeX</a>  <a tabindex = "2" style= "display: inline-block;" class="button HTML" aria-label="Open HTML file of Document in New Tab" 
+			href= ../output/assignments/hw3CSE105W25.html target="HTML">Raw HTML</a><br> <label>Sample solutions<input type="checkbox" id="toggle-3">
+				<span class="slider round"></span>
+				<script>
+					annotated3 = false;
+					document.getElementById("toggle-3").onclick = function() {
+						if(annotated3  == false) {
+							console.log("false to true");
+							annotated3  = true;
+							annotations(true, "../output/assignments/hw3CSE105W25.pdf","../files/hw3CSE105W25_solution.pdf", "hw3CSE105W25")
+						}
+						else {
+							console.log("true to false");
+							annotated3  = false;
+							annotations(false, "../output/assignments/hw3CSE105W25.pdf","../files/hw3CSE105W25_solution.pdf", "hw3CSE105W25")
+						}
+					}
+
+					
+				</script></label>
+			 <br> <iframe class="PDFjs" id="hw3CSE105W25" src="web/viewer.html?file=../../output/assignments/hw3CSE105W25.pdf" 
+		title="webviewer" frameborder="0" width="100%" height="600"></iframe> <script>
+			 toggle = document.querySelector('.toggle input')
+
+			toggle.addEventListener('click', () => {
+    		 onOff = toggle.parentNode.querySelector('.onoff3')
+    		onOff.textContent = toggle.checked ? 'ON' : 'OFF'
+			})
+			
+			function annotations(notes, annotated,id) {
+				var doc;
+				var drive;
+				 toggle = document.querySelector('.toggle input')
+				//0 value means annotations are off 
+				if (toggle.checked) {
+					doc = "web/viewer.html?file=../"+notes
+				} 
+
+				//1 value turns annotations on
+				else {
+					doc = "web/viewer.html?file=../" +annotated
+				}
+				
+                document.getElementById(id).src = doc;
+			}
+		</script></div></div><div class="box outcome"  id="box4"><button type="button" class="collapsible"
+			"> 
+<h2 style= "line-height:20px;"> <i id="sideBtn4" class='bx bx-caret-right'></i> 
+			Hw4Cse105W25</h2> </button> <div class="boxContent" style="display: none;"> <hr> <p> This is a group optional assignment</p> <p> Due: 2/20/25 at 5pm (late submission open until 8am next morning)</p> <p> <a tabindex = "2" class="button PDF" aria-label="Download PDF" 
+		href=../output/assignments/hw4CSE105W25.pdf download>PDF</a> <a tabindex = "2" style= "display: inline-block;" class="button LaTeX" aria-label="Download .LaTeX" 
+			href= download>LaTeX</a>  <a tabindex = "2" style= "display: inline-block;" class="button HTML" aria-label="Open HTML file of Document in New Tab" 
+			href= ../output/assignments/hw4CSE105W25.html target="HTML">Raw HTML</a><br> <label>Sample solutions<input type="checkbox" id="toggle-4">
+				<span class="slider round"></span>
+				<script>
+					annotated4 = false;
+					document.getElementById("toggle-4").onclick = function() {
+						if(annotated4  == false) {
+							console.log("false to true");
+							annotated4  = true;
+							annotations(true, "../output/assignments/hw4CSE105W25.pdf","../files/hw4CSE105W25_solution.pdf", "hw4CSE105W25")
+						}
+						else {
+							console.log("true to false");
+							annotated4  = false;
+							annotations(false, "../output/assignments/hw4CSE105W25.pdf","../files/hw4CSE105W25_solution.pdf", "hw4CSE105W25")
+						}
+					}
+
+					
+				</script></label>
+			 <br> <iframe class="PDFjs" id="hw4CSE105W25" src="web/viewer.html?file=../../output/assignments/hw4CSE105W25.pdf" 
+		title="webviewer" frameborder="0" width="100%" height="600"></iframe> <script>
+			 toggle = document.querySelector('.toggle input')
+
+			toggle.addEventListener('click', () => {
+    		 onOff = toggle.parentNode.querySelector('.onoff4')
+    		onOff.textContent = toggle.checked ? 'ON' : 'OFF'
+			})
+			
+			function annotations(notes, annotated,id) {
+				var doc;
+				var drive;
+				 toggle = document.querySelector('.toggle input')
+				//0 value means annotations are off 
+				if (toggle.checked) {
+					doc = "web/viewer.html?file=../"+notes
+				} 
+
+				//1 value turns annotations on
+				else {
+					doc = "web/viewer.html?file=../" +annotated
+				}
+				
+                document.getElementById(id).src = doc;
+			}
+		</script></div></div><div class="box outcome"  id="box5"><button type="button" class="collapsible"
+			"> 
+<h2 style= "line-height:20px;"> <i id="sideBtn5" class='bx bx-caret-right'></i> 
+			Hw5Cse105W25</h2> </button> <div class="boxContent" style="display: none;"> <hr> <p> This is a group optional assignment</p> <p> Due: 2/27/25 at 5pm (late submission open until 8am next morning)</p> <p> <a tabindex = "2" class="button PDF" aria-label="Download PDF" 
+		href=../output/assignments/hw5CSE105W25.pdf download>PDF</a> <a tabindex = "2" style= "display: inline-block;" class="button LaTeX" aria-label="Download .LaTeX" 
+			href= download>LaTeX</a>  <a tabindex = "2" style= "display: inline-block;" class="button HTML" aria-label="Open HTML file of Document in New Tab" 
+			href= ../output/assignments/hw5CSE105W25.html target="HTML">Raw HTML</a><br> <label>Sample solutions<input type="checkbox" id="toggle-5">
+				<span class="slider round"></span>
+				<script>
+					annotated5 = false;
+					document.getElementById("toggle-5").onclick = function() {
+						if(annotated5  == false) {
+							console.log("false to true");
+							annotated5  = true;
+							annotations(true, "../output/assignments/hw5CSE105W25.pdf","../files/hw5CSE105W25_solution.pdf", "hw5CSE105W25")
+						}
+						else {
+							console.log("true to false");
+							annotated5  = false;
+							annotations(false, "../output/assignments/hw5CSE105W25.pdf","../files/hw5CSE105W25_solution.pdf", "hw5CSE105W25")
+						}
+					}
+
+					
+				</script></label>
+			 <br> <iframe class="PDFjs" id="hw5CSE105W25" src="web/viewer.html?file=../../output/assignments/hw5CSE105W25.pdf" 
+		title="webviewer" frameborder="0" width="100%" height="600"></iframe> <script>
+			 toggle = document.querySelector('.toggle input')
+
+			toggle.addEventListener('click', () => {
+    		 onOff = toggle.parentNode.querySelector('.onoff5')
+    		onOff.textContent = toggle.checked ? 'ON' : 'OFF'
+			})
+			
+			function annotations(notes, annotated,id) {
+				var doc;
+				var drive;
+				 toggle = document.querySelector('.toggle input')
+				//0 value means annotations are off 
+				if (toggle.checked) {
+					doc = "web/viewer.html?file=../"+notes
+				} 
+
+				//1 value turns annotations on
+				else {
+					doc = "web/viewer.html?file=../" +annotated
+				}
+				
+                document.getElementById(id).src = doc;
+			}
+		</script></div></div><div class="box outcome"  id="box6"><button type="button" class="collapsible"
+			"> 
+<h2 style= "line-height:20px;"> <i id="sideBtn6" class='bx bx-caret-right'></i> 
+			Hw6Cse105W25</h2> </button> <div class="boxContent" style="display: none;"> <hr> <p> This is a group optional assignment</p> <p> Due: 3/13/25 at 5pm (late submission open until 8am next morning)</p> <p> <a tabindex = "2" class="button PDF" aria-label="Download PDF" 
+		href=../output/assignments/hw6CSE105W25.pdf download>PDF</a> <a tabindex = "2" style= "display: inline-block;" class="button LaTeX" aria-label="Download .LaTeX" 
+			href= download>LaTeX</a>  <a tabindex = "2" style= "display: inline-block;" class="button HTML" aria-label="Open HTML file of Document in New Tab" 
+			href= ../output/assignments/hw6CSE105W25.html target="HTML">Raw HTML</a><br> <label>Sample solutions<input type="checkbox" id="toggle-6">
+				<span class="slider round"></span>
+				<script>
+					annotated6 = false;
+					document.getElementById("toggle-6").onclick = function() {
+						if(annotated6  == false) {
+							console.log("false to true");
+							annotated6  = true;
+							annotations(true, "../output/assignments/hw6CSE105W25.pdf","../files/hw6CSE105W25_solutions.pdf", "hw6CSE105W25")
+						}
+						else {
+							console.log("true to false");
+							annotated6  = false;
+							annotations(false, "../output/assignments/hw6CSE105W25.pdf","../files/hw6CSE105W25_solutions.pdf", "hw6CSE105W25")
+						}
+					}
+
+					
+				</script></label>
+			 <br> <iframe class="PDFjs" id="hw6CSE105W25" src="web/viewer.html?file=../../output/assignments/hw6CSE105W25.pdf" 
+		title="webviewer" frameborder="0" width="100%" height="600"></iframe> <script>
+			 toggle = document.querySelector('.toggle input')
+
+			toggle.addEventListener('click', () => {
+    		 onOff = toggle.parentNode.querySelector('.onoff6')
+    		onOff.textContent = toggle.checked ? 'ON' : 'OFF'
+			})
+			
+			function annotations(notes, annotated,id) {
+				var doc;
+				var drive;
+				 toggle = document.querySelector('.toggle input')
+				//0 value means annotations are off 
+				if (toggle.checked) {
+					doc = "web/viewer.html?file=../"+notes
+				} 
+
+				//1 value turns annotations on
+				else {
+					doc = "web/viewer.html?file=../" +annotated
+				}
+				
+                document.getElementById(id).src = doc;
+			}
+		</script></div></div><div class="box outcome"  id="box7"><button type="button" class="collapsible"
+			"> 
+<h2 style= "line-height:20px;"> <i id="sideBtn7" class='bx bx-caret-right'></i> 
+			Projectcse105W25</h2> </button> <div class="boxContent" style="display: none;"> <hr> <p> This is an Individual Assignment</p> <p> Due: 3/19/25 8am.</p> <p> <a tabindex = "2" class="button PDF" aria-label="Download PDF" 
+		href=../output/assignments/projectCSE105W25.pdf download>PDF</a> <a tabindex = "2" style= "display: inline-block;" class="button LaTeX" aria-label="Download .LaTeX" 
+			href= download>LaTeX</a>  <a tabindex = "2" style= "display: inline-block;" class="button HTML" aria-label="Open HTML file of Document in New Tab" 
+			href= ../output/assignments/projectCSE105W25.html target="HTML">Raw HTML</a><br> <br> <iframe class="PDFjs" id="projectCSE105W25" src="web/viewer.html?file=../../output/assignments/projectCSE105W25.pdf" 
+		title="webviewer" frameborder="0" width="100%" height="600"></iframe> <script>
+			 toggle = document.querySelector('.toggle input')
+
+			toggle.addEventListener('click', () => {
+    		 onOff = toggle.parentNode.querySelector('.onoff7')
+    		onOff.textContent = toggle.checked ? 'ON' : 'OFF'
+			})
+			
+			function annotations(notes, annotated,id) {
+				var doc;
+				var drive;
+				 toggle = document.querySelector('.toggle input')
+				//0 value means annotations are off 
+				if (toggle.checked) {
+					doc = "web/viewer.html?file=../"+notes
+				} 
+
+				//1 value turns annotations on
+				else {
+					doc = "web/viewer.html?file=../" +annotated
+				}
+				
+                document.getElementById(id).src = doc;
+			}
+		</script></div></div><script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	
+	var boxNumber;
+	var expanded; 
+	url = window.location.href;
+
+	queryString();
+
+	function queryString(box){
+		var qInd;
+		var boxValue;
+		var expandedValue;
+		var valuesAdded = 0; 
+
+		for( i=0; i<url.length; i++){
+			if(url[i]==="="){
+				valuesAdded++;
+				i++; //go to value next to = 
+
+				//boxNumber must always be before expanded, 
+				// and both have one character values (0 or 1)
+				if(valuesAdded == 1){
+					boxValue = url[i]; 
+				}
+				else {
+					expandedValue = url[i];
+				}
+				
+				console.log("value: "+url[i]);
+			}
+		}
+	}
+	
+	for (i = 0; i < coll.length; i++) {
+		sideBtnString="#sideBtn";
+		sideBtnString+=(i+1);
+		boxString="#box";
+		boxString +=(i+1);
+		console.log(boxString);
+		let sideBtn = document.querySelector(sideBtnString);
+		let box = document.querySelector(boxString);
+		let h2 = document.querySelector("h2");
+
+  		coll[i].addEventListener("click", function() {
+    		this.classList.toggle("active");
+    		var content = this.nextElementSibling;
+    	
+			if (content.style.display === "block") {
+      			content.style.display = "none";
+				h2.style.lineHeight="20px";
+    		} 
+			else {
+      			content.style.display = "block";
+				h2.style.lineHeight="20px";
+    		}
+			if(this.classList.contains("active")){
+				sideBtn.classList.replace("bx-caret-right", "bx-caret-down");//replacing the icons class
+			}
+			else {
+			sideBtn.classList.replace("bx-caret-down","bx-caret-right");//replacing the icons class
+			}
+		});
+	}
+
+	function expandCollapseAll(bool, multiple) {
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+		for (i = 0; i < coll.length; i++) {
+			sideBtnString="#sideBtn";
+			sideBtnString+=(i+1);
+			boxString="#box";
+			boxString +=(i+1);
+			let sideBtn = document.querySelector(sideBtnString);
+			let box = document.querySelector(boxString);
+
+			//coll[i].classList.toggle("active");
+    		var content = coll[i].nextElementSibling;
+
+			if(bool==0){
+				//expand all 
+				content.style.display = "block";
+				sideBtn.classList.replace("bx-caret-right", "bx-caret-down");//replacing the icons class
+				coll[i].style.background= "white";
+				box.style.background="white";
+			}
+			else{
+				 //collapse all
+				content.style.display = "none";
+				sideBtn.classList.replace("bx-caret-down","bx-caret-right");//replacing the icons class
+				coll[i].style.background= "lightgray";
+				box.style.background="lightgray";
+			}
+		}
+
+		return bool;
+	}
+
+
+	</script>
+			</div>
+		</div>
+
+		<script>
+			function annotations(boolean, notes, annotated,id) {
+				var doc;
+				var drive;
+				if (boolean) {
+					doc = "web/viewer.html?file=../" +annotated
+					
+				} 
+
+				else {
+					doc = "web/viewer.html?file=../"+notes
+				}
+				
+				document.getElementById(id).src = doc;
+			}
+		</script>
+
+
+
+	</div>
+	
+
+	<!-- jQuery Version 1.11.1 -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

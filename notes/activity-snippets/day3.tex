@@ -1,0 +1,91 @@
+%! app: Regular Languages
+%! outcome: Regular expressions
+
+
+{\bf Review}: Determine whether each statement below about regular expressions
+over the alphabet $\{a,b,c\}$ is true or false:
+
+\begin{comment}
+True or False: \qquad 
+   $a  \in L(~(a \cup b )~\cup c)$
+\end{comment}
+
+True or False: \qquad 
+   $ab  \in L(~ (a \cup b)^*  ~)$
+   
+True or False: \qquad    
+   $ba \in L( ~ a^* b^* ~)$
+   
+True or False: \qquad 
+   $\varepsilon  \in L(a \cup b \cup c)$
+   
+True or False: \qquad 
+   $\varepsilon  \in L(~ (a \cup b)^*  ~)$
+
+True or False: \qquad 
+   $\varepsilon \in L( ~ aa^* \cup bb^* ~)$
+
+\vfill
+
+{\it Shorthand and conventions} (Sipser pages 63-65)
+
+\vspace{-20pt}
+
+\begin{center}
+    \begin{tabular}{|ll|}
+    \hline
+    & \\
+    \multicolumn{2}{|l|}{Assuming $\Sigma$ is the alphabet, we use the following conventions}\\
+    & \\
+    $\Sigma$   & regular  expression describing language consisting of  all strings  of length  $1$ over $\Sigma$\\
+    $*$ then $\circ$ then $\cup$   & precedence order, unless parentheses are used to change it\\
+    $R_1R_2$ & shorthand  for  $R_1  \circ R_2$ (concatenation symbol is implicit) \\
+    $R^+$ & shorthand for $R^* \circ R$ \\
+    $R^k$ & shorthand for $R$ concatenated with itself $k$ times, where $k$ is a (specific) natural number\\
+    & \\
+    \hline
+    \end{tabular}
+\end{center}
+
+\vfill 
+
+{\bf Caution: many programming languages that support regular expressions build in functionality
+that is more powerful than the ``pure'' definition of regular expressions given here. }
+
+Regular expressions are everywhere (once you start looking for them).
+
+Software tools and languages often have built-in support for regular expressions to describe
+{\bf patterns} that we want to match (e.g. Excel/ Sheets, grep, Perl, python, Java, Ruby).
+
+Under the hood, the first phase of {\bf compilers} is to transform the strings we write 
+in code to tokens (keywords, operators, identifiers, literals). Compilers use regular expressions
+to describe the sets of strings that can be used for each token type.
+
+Next time: we'll start to see how to build machines that decide whether strings match the pattern
+described by a regular expression.
+
+\newpage
+
+Practice with the regular expressions over $\{a,b\}$ below.
+
+For example: Which regular expression(s) below describe a language that includes the string $a$ as an element?
+
+$a^* b^*$ 
+
+\vfill
+
+$a(ba)^* b$
+
+\vfill
+
+$a^* \cup b^*$
+
+\vfill
+
+$(aaa)^*$
+
+\vfill
+
+$(\varepsilon \cup a) b$
+
+\vfill

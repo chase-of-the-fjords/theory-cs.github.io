@@ -1,0 +1,98 @@
+\input{../../resources/lesson-head.tex}
+
+\subsection*{Week 2 at a glance}
+
+\vspace{-15pt}
+
+\subsubsection*{Textbook reading: Sections 1.1, 1.2}
+
+\vspace{-15pt}
+
+Before Monday, read Figure 1.4 and Definition 1.5 (definition of finite automata) on pages 34-35.
+
+Before Wednesday, read pages 41-43 (Figures 1.18, 1.19, 1.20) for examples of automata and languages. Wednesday's class will be asynchronous. Please read over the annotated notes and watch the relevant supplementary videos. Ask any followup questions in the discussion forum or in office hours.
+
+Before Friday, read pages 48-50 (Figures 1.27, 1.29) which introduces nondeterminism.
+
+No class on Week 3 Monday in observance of Martin Luther King Jr. Day.
+
+For Week 3 Wednesday: read the definition of the union, concatenation, and star operations for languages,  given 
+as Definition 1.23 on page 44 and a useful example is Example 1.24.
+
+\vspace{-20pt}
+
+\subsubsection*{We will be learning and practicing to:}
+%Define decision problem, Formal definition of automata, Informal definition of automata, Find example languages, 
+%Describe and use models of computation that don't involve state machines.
+\begin{itemize}
+\item Clearly and unambiguously communicate computational ideas using appropriate formalism. Translate across levels of abstraction.
+\begin{itemize}
+   \item Give examples of sets that are regular (and prove that they are).
+   \begin{itemize}
+      \item {\bf State the definition of the class of regular languages}
+      \item {\bf Give examples of regular languages, using each of the three equivalent models of computation for proving regularity.}
+   \end{itemize}
+   \item Describe and use models of computation that don't involve state machines.
+   \begin{itemize}
+      \item {\bf Given a DFA, find a regular expression that describes its language.}
+      \item {\bf Given a regular expression, find a DFA that recognizes its language.}
+   \end{itemize}
+   \item Use precise notation to formally define the state diagram of finite automata.
+   \item Use clear English to describe computations of finite automata informally.
+      \begin{itemize}
+         \item {\bf State the formal definition of (deterministic) finite automata}   
+         \item {\bf Trace the computation of a finite automaton on a given string using its state diagram}
+         \item {\bf Translate between a state diagram and a formal definition}
+         \item {\bf Determine if a given string is in the language recognized by a finite automaton}
+         \item {\bf Design an automaton that recognizes a given language}
+         \item {\bf Specify a general construction for DFA based on parameters}
+         \item {\bf Design general constructions for DFA}
+   \end{itemize}
+\end{itemize}
+
+\end{itemize}
+\newpage
+\subsubsection*{TODO:}
+\begin{list}{\itemsep-10pt}
+   \item \#FinAid Assignment on Canvas (complete as soon as possible) and read syllabus on Canvas
+   \item Schedule your Test 1 Attempt 1, Test 2 Attempt 1, Test 1 Attempt 2, and Test 2 Attempt 2 times 
+   at PrairieTest (http://us.prairietest.com)
+   \item Review Quiz 1 on PrairieLearn (http://us.prairielearn.com), complete by 1/15/25
+   \item Create a homework group, possibly by using the Piazza (https://piazza.com/) find-a-teammate tool
+   \item Homework 1 submitted via Gradescope (https://www.gradescope.com/), due 1/16/25
+   \item Review Quiz 2 on PrairieLearn (http://us.prairielearn.com), complete by 1/22/25
+\end{list}
+
+
+\newpage
+
+\subsection*{Week 2 Monday: Finite automata}
+
+\input{../activity-snippets/day4.tex}
+
+
+\subsection*{Week 2 Wednesay: Finite automaton constructions - asynchronous}
+
+\input{../activity-snippets/day5.tex}
+
+\newpage
+\subsection*{Week 2 Friday: Nondeterministic automata}
+
+We saw that whenever a language is recognized by a DFA, its
+complement is also recognized by some (other) DFA. 
+
+Another way to say this is that the collection of languages
+that are each recognizable by a DFA is {\bf closed} under complementation.
+
+
+Before we continue with more complicated constructions, let's revisit some of 
+the assumption of the {\bf D}FA model.
+
+Recall that the computation of {\bf deterministic} finite automaton has exactly one choice for its next step given the current state and the current character to read.
+
+
+\input{../activity-snippets/day6.tex}
+
+
+
+\end{document}
